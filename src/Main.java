@@ -19,9 +19,9 @@ public static void main(String[] args) {
 
 
     System.out.println("-----rooms-------");
-    System.out.println("Room " + room1.getRoomNumber() + ": Beds: " + room1.getNumberOfBeds() + ". Balcony: " + room1.isHasBalcony() + ". See view: "  + room1.isHasSeeView() + ". Price per night: " + room1.getOneNightPrice());
-    System.out.println("Room " + room2.getRoomNumber() + ": Beds: " + room2.getNumberOfBeds() + ". Balcony: " + room2.isHasBalcony() + ". See view: " + room2.isHasSeeView() + ". Price per night: " + room2.getOneNightPrice());
-    System.out.println("Room " +room3.getRoomNumber() + ": Beeds: " + room3.getNumberOfBeds() + ". Balcony: " + room3.isHasBalcony() + ". See view: " + room3.isHasSeeView() + ". Price per night: " + room3.getOneNightPrice());
+    System.out.println("Room " + room1.roomNumber() + ": Beds: " + room1.numberOfBeds() + ". Balcony: " + room1.hasBalcony() + ". See view: "  + room1.hasSeeView() + ". Price per night: " + room1.oneNightPrice());
+    System.out.println("Room " + room2.roomNumber() + ": Beds: " + room2.numberOfBeds() + ". Balcony: " + room2.hasBalcony() + ". See view: " + room2.hasSeeView() + ". Price per night: " + room2.oneNightPrice());
+    System.out.println("Room " +room3.roomNumber() + ": Beeds: " + room3.numberOfBeds() + ". Balcony: " + room3.hasBalcony() + ". See view: " + room3.hasSeeView() + ". Price per night: " + room3.oneNightPrice());
 
     List<Guest> reservation1 = new ArrayList<>();
     reservation1.add(adela);
@@ -34,7 +34,7 @@ public static void main(String[] args) {
     Booking booking2 = new Booking(3, "vacation", LocalDate.of(2021,9,1), LocalDate.of(2021,9,14), reservation2);
 
     System.out.println("-----reservations-------");
-    System.out.println("Reservation 1. For: " + reservation1.get(0).getName() + " " + reservation1.get(0).getSurname()+ ". Room: " + booking1.getRoomNumber() + ". Type of vacation: " + booking1.getTypeOfVacation() + ". From " + booking1.getStartDate() + " to " + booking1.getEndDate());
+    System.out.println("Reservation 1. For: " + reservation1.getFirst().getName() + " " + reservation1.getFirst().getSurname()+ ". Room: " + booking1.getRoomNumber() + ". Type of vacation: " + booking1.getTypeOfVacation() + ". From " + booking1.getStartDate() + " to " + booking1.getEndDate());
     System.out.println("Reservation 2. For: " + reservation2.get(0).getName() + " " + reservation2.get(0).getSurname() + " and  " + reservation2.get(1).getName() + " " + reservation2.get(1).getSurname()+ ". Room: " + booking2.getRoomNumber() + ". Type of vacation: " + booking2.getTypeOfVacation() + ". From " + booking2.getStartDate() + " to " + booking2.getEndDate());
 
     System.out.println("-----all bookings-------");

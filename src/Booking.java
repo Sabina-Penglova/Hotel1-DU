@@ -2,11 +2,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Booking {
-    private int roomNumber;
-    private String typeOfVacation;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private List<Guest> guest;
+    private final int roomNumber;
+    private final String typeOfVacation;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
+    private final List<Guest> guest;
 
     public Booking(int roomNumber, String typeOfVacation, LocalDate startDate, LocalDate endDate, List<Guest> guest) {
         this.roomNumber = roomNumber;
@@ -32,16 +32,12 @@ public class Booking {
         return endDate;
     }
 
-    public List<Guest> getGuest() {
-        return guest;
-    }
-
 
     public String toString() {
         StringBuilder guestsString = new StringBuilder();
 
         for (Guest g : guest) {
-            if (guestsString.length() > 0) {
+            if (!guestsString.isEmpty()) {
                 guestsString.append(", ");
             }
             guestsString.append(g.getName()).append(" ").append(g.getSurname());
